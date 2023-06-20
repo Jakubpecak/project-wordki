@@ -3,8 +3,7 @@
         padding-bottom: 10px!important;
     }
     .footer {
-        display: flex;
-        gap: 20px;
+        display: block;
 
         &-menu {
             gap: 20px;
@@ -16,6 +15,7 @@
         &-socials {
             gap: 20px;
             width: 240px;
+            justify-content: end;
             &-item {
                 font-size: 18px;
             }
@@ -25,7 +25,7 @@
     .copy-rights {
         display: flex;
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 20px;
         font-size: 1.2rem;
     }
 }

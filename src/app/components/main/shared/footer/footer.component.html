@@ -1,25 +1,26 @@
 <footer class="container">
-    <div class="footer" [ngStyle]="{'justify-content' : 'space-between'}">
-        <div class="footer-logo col">
-            <h2>Kuba</h2>
-            <h3>Frontend developer</h3>
+    <div class="footer">
+        <div class="footer-logo">
+            <h2>Wordki</h2>
         </div>
-        <div class="footer-menu row">
-            <a class="footer-menu-item">About me</a>
-            <a class="footer-menu-item">Skills</a>
-            <a class="footer-menu-item">Contact</a>
-        </div>
-        <div class="footer-socials row">
-            <div class="footer-socials-sidebar-item">
-                <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
+        <div class="row" [ngStyle]="{'justify-content' : 'space-between', 'padding-top' : '20px'}">
+            <div class="footer-menu row">
+                <a class="footer-menu-item">About us</a>
+                <a class="footer-menu-item">Dictionaries</a>
+                <a class="footer-menu-item">Quizes</a>
             </div>
-            <div class="footer-socials-sidebar-item">
-                <a href="#"><i class="fab fa-facebook icon"></i></a>
-            </div>
-            <div class="footer-socials-sidebar-item">
-                <a href="#"><i class="fab fa-github icon"></i></a>
+            <div class="footer-socials row">
+                <div class="footer-socials-sidebar-item">
+                    <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
+                </div>
+                <div class="footer-socials-sidebar-item">
+                    <a href="#"><i class="fab fa-facebook icon"></i></a>
+                </div>
+                <div class="footer-socials-sidebar-item">
+                    <a href="#"><i class="fab fa-github icon"></i></a>
+                </div>
             </div>
         </div>
     </div>
-    <h5 class="copy-rights">Kuba &copy; {{ date }}. All right reserved</h5>
+    <h5 class="copy-rights">Wordki &copy; {{ date }}. All right reserved</h5>
 </footer>

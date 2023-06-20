@@ -10,6 +10,9 @@ import { PageNotFoundComponent } from './components/main/shared/page-not-found/p
 import { PopupComponent } from './components/shared/popup/popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { AboutUsComponent } from './components/main/home/about-us/about-us.component';
+import { OfferComponent } from './components/main/home/offer/offer.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavigationComponent,
     FooterComponent,
     PageNotFoundComponent,
-    PopupComponent
+    PopupComponent,
+    AboutUsComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

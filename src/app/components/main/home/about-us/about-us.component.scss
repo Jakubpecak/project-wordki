@@ -1,8 +1,11 @@
+@import 'src/styles/mixins.scss';
+
 :host {
     .container {
         .about {
             justify-content: center;
             gap: 100px;
+
             &-picture {
                 img {
                     margin: 0 auto;
@@ -27,6 +30,20 @@
                         padding-bottom: 10px;
                     }
                 }
+
+                @include mobile {
+                    gap: 10px;
+                }
+            }
+
+            @include tablet {
+                gap: 50px;
+            }
+
+            @include mobile {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                gap: 20px;
             }
         }    
         p {

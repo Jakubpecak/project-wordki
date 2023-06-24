@@ -1,3 +1,5 @@
+@import 'src/styles/mixins.scss';
+
 :host {
     .nav {
         display: flex;
@@ -5,14 +7,51 @@
         &-logo {
             font-size: 2rem;
             font-weight: 500;
+            color: #673ab7;;
             cursor: pointer;
+
+            @include mobile {
+                display: flex;
+            }
         }
         &-menu {
             display: flex;
             gap: 20px;
             &-item {
                 font-size: 1.8rem;
+
+                @include mobile {
+                    font-size: 1.6rem;
+                }
             }
         }
     }
+
+    .sidenav-container {
+        height: 100%;
+      }
+      
+    .sidenav {
+        position: fixed;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    ::ng-deep .mat-drawer-inner-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav-menu-item-mobile {
+        text-align: center;
+
+        a {
+            font-size: 20px;
+        }
+    }
+
+
 }

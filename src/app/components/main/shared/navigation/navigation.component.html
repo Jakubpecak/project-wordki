@@ -1,12 +1,24 @@
 <nav class="container">
     <div class="nav">
-        <div class="nav-logo center" routerLink="/">Wordki</div>
-        <div class="nav-menu center">
-            <a class="nav-menu-item">Translation</a>
-            <a class="nav-menu-item">Dictionaries</a>
+        <div class="nav-logo center" routerLink="/">TestName</div>
+        <div class="nav-menu center" *ngIf="!isMobile">
             <a class="nav-menu-item">Quizes</a>
             <a class="nav-menu-item">Log in</a>
             <a class="nav-menu-item">Sign up</a>
         </div>
+
+        <mat-sidenav-container class="sidenav-container" *ngIf="isMobile">
+            <mat-sidenav #sidenav class="sidenav" mode="over">
+              <p [ngStyle]="{'text-align' : 'right'}"><button mat-button color="primary" (click)="sidenav.close()">Zamknij</button></p>
+              <p class="nav-menu-item-mobile"><a>Quizes</a></p>
+              <p class="nav-menu-item-mobile"><a >Log in</a></p>
+              <p class="nav-menu-item-mobile"><a >Sign up</a></p>
+            </mat-sidenav>
+            <mat-sidenav-content>
+              <button mat-button color="primary" (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon> Menu
+              </button>
+            </mat-sidenav-content>
+          </mat-sidenav-container>
     </div>
 </nav>

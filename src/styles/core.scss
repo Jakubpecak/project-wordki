@@ -13,6 +13,10 @@ body {
     line-height: 1;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 ol, ul {
     list-style: none;
     margin: 0;
@@ -23,6 +27,14 @@ a {
     text-decoration: none;
     color: black;
     cursor: pointer;
+
+    @include mobile {
+        font-size: 1.6rem;
+    }
+}
+
+a:hover {
+    color: #673ab7;
 }
 
 img {
@@ -42,19 +54,51 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 h1 {
     font-size: 3.6rem;
     font-weight: 500;
+
+    @include tablet {
+        font-size: 3.3rem;
+    }
+
+    @include mobile {
+        font-size: 3rem;
+    }
 }
 
 h2 {
     font-size: 3rem;
+
+    @include tablet {
+        font-size: 2.7rem;
+    }
+
+    @include mobile {
+        font-size: 2.4rem;
+    }
 }
 
 h3 {
     font-size: 2.5rem;
+
+    @include tablet {
+        font-size: 2.2rem;
+    }
+
+    @include mobile {
+        font-size: 1.9rem;
+    }
 }
 
 p {
     font-size: 1.8rem;
     line-height: 1.2em;
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+    }
 }
 
 button {

@@ -4,10 +4,8 @@
     </button>
     <h1 mat-dialog-title>{{ this.title }}</h1>
     <div mat-dialog-content>
-        <ul>
-            <ng-container *ngFor="let item of list">
-                <li [ngStyle]="{'padding-bottom' : '10px'}"><i class="fas fa-check-circle"></i> {{ item }}</li>
-            </ng-container>
-        </ul>
+        <div class="test" *ngFor="let item of list">
+                <a [ngStyle]="{'padding-bottom' : '10px'}"><i class="fas fa-check-circle"></i> {{ item }}</a>
+        </div>
     </div>
 </div>

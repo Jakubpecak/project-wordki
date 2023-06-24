@@ -1,3 +1,5 @@
+@import 'src/styles/mixins.scss';
+
 :host {
     .container-dialog {
         position: relative;
@@ -11,6 +13,12 @@
 
         .mat-dialog-content {
             padding: 0;
+
+            .test {
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         button {
@@ -21,15 +29,20 @@
             background: transparent;
             cursor: pointer;
             z-index: 10;
-        }
-    }
 
-    ul {
-        padding: 0 24px;
-        margin: 0;
+            @include mobile {
+                top: -25px;
+                right: -25px;
+            }
+        }
+
+        @include mobile {
+            width: auto;
+        }
     }
 }
 
 ::ng-deep .mat-dialog-container {
     border-radius: 10px;
+    overflow: hidden;
 }

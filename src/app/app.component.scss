@@ -1,0 +1,10 @@
+@import '/src/styles/mixins.scss';
+
+:host {
+    display: grid;
+    height: inherit;
+
+    @include mobile {
+        display: inherit;
+    }
+}

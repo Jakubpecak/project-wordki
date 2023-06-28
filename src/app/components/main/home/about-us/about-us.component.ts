@@ -19,7 +19,7 @@ export class AboutUsComponent implements OnInit {
   openDialog(): void {
     this.dialog.open(PopupComponent, {
       disableClose: true,
-      data: {title: this.title}
+      data: {title: this.title, isLoginIn: false, isRegistration: false}
   })}
   
 }

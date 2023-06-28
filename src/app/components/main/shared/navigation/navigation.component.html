@@ -2,14 +2,14 @@
     <div class="nav">
         <div class="nav-logo center" routerLink="/">TestName</div>
         <div class="nav-menu center" *ngIf="!isMobile">
-            <a class="nav-menu-item">Quizes</a>
-            <a class="nav-menu-item">Log in</a>
-            <a class="nav-menu-item">Sign up</a>
+            <a class="nav-menu-item" [routerLink]="'/quizes'">Quizes</a>
+            <a class="nav-menu-item" (click)="openDialog('Log in', true, false)">Log in</a>
+            <a class="nav-menu-item" (click)="openDialog('Registration', false, true)">Sign up</a>
         </div>
 
         <mat-sidenav-container class="sidenav-container" *ngIf="isMobile">
             <mat-sidenav #sidenav class="sidenav" mode="over">
-              <p [ngStyle]="{'text-align' : 'right'}"><button mat-button color="primary" (click)="sidenav.close()">Zamknij</button></p>
+              <p [ngStyle]="{'text-align' : 'right'}"><button mat-button color="primary" (click)="sidenav.close()">Close</button></p>
               <p class="nav-menu-item-mobile"><a>Quizes</a></p>
               <p class="nav-menu-item-mobile"><a >Log in</a></p>
               <p class="nav-menu-item-mobile"><a >Sign up</a></p>

@@ -3,7 +3,10 @@
 :host {
     .container-dialog {
         position: relative;
-        width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 500px;
 
         h1 {
             font-size: 25px!important;
@@ -14,7 +17,7 @@
         .mat-dialog-content {
             padding: 0;
 
-            .test {
+            .list {
                 padding: 0 20px;
                 display: flex;
                 flex-direction: column;
@@ -38,6 +41,30 @@
 
         @include mobile {
             width: auto;
+        }
+
+        .btn {
+            position: unset;
+            display: block;
+            text-align: center;
+            padding: 5px 25px;
+            width: fit-content;
+            margin: auto;
+        }
+
+        .submit {
+            background-color: #673ab7;
+            color: white;
+        }
+
+        .disable {
+            background-color: lightgray;
+            color: gray;
+            pointer-events: none; 
+        }
+
+        form {
+            padding: 0 24px;
         }
     }
 }

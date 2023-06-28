@@ -1,0 +1,45 @@
+<mat-form-field 
+    class="input"
+    [id]="id"
+    [appearance]="appearance"
+    >
+    <mat-label>{{ label }}</mat-label>
+    <input
+    *ngIf="type === 'text'"
+    #field
+    matInput     
+    [type]="type"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    (focusOut)="focusOut.emit(true)"
+    >
+    <input
+    *ngIf="type === 'number'"
+    #field
+    matInput     
+    [type]="type"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    [max]="max"
+    [min]="min"
+    >
+    <input
+    *ngIf="type === 'email'"
+    #field
+    matInput     
+    [type]="type"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    (focusOut)="focusOut.emit(true)"
+    >
+
+    <input
+    *ngIf="type === 'password'"
+    #field
+    matInput     
+    [type]="type"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    (focusOut)="focusOut.emit(true)"
+    >
+</mat-form-field>

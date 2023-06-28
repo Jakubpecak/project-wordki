@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from 'src/app/components/shared/popup/popup.component';
 
 @Component({
   selector: 'app-navigation',
@@ -9,7 +11,7 @@ export class NavigationComponent implements OnInit {
   isMobile: boolean = false;
   showFiller = false;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.onResize();
@@ -19,5 +21,11 @@ export class NavigationComponent implements OnInit {
   onResize() {
     this.isMobile = window.innerWidth < 768;
   }
+
+  openDialog(title?: string, isLoginIn?: boolean, isRegistration?: boolean): void {
+    this.dialog.open(PopupComponent, {
+      disableClose: true,
+      data: {title: title, isLoginIn: isLoginIn, isRegistration: isRegistration}
+  })}
 
 }

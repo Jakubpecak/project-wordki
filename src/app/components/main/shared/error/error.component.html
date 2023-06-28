@@ -1,0 +1,6 @@
+<mat-error *ngIf="form.hasError('email') && !form.hasError('required') && form.dirty">
+    Please enter a valid email address
+  </mat-error>
+  <mat-error *ngIf="form.hasError('required') && form.dirty">
+    {{ type }} is required
+</mat-error>
